@@ -5,8 +5,10 @@
      var getUserName = prompt("To start, what's your name? This is the one question you can't get wrong.")
      alert("WRONG! Just kidding, " + getUserName + " is a cool name. Let's get started")
     
-     /*Each user response is converted to lower case. The user receives an alert
-     after each answer based on their response.*/
+     /*This is a collection of Javascript prompts and alerts asking the
+     user a question. Alert response is determined by the user's input
+     Each user response is converted to lower case. The function startQuiz() 
+     begins the program and is called with id quizButton in index.html.*/
      var lightSaberColor = prompt("What color is Mace Windu's light saber?").toLowerCase();
      if(lightSaberColor === 'purple'){
          alert('Well done padwan');
