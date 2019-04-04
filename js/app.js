@@ -16,15 +16,13 @@
      while(userGuessesRemaining > 0 && lightSaberColor !== 'purple'){
          alert('Come Padawan, the answer is right before you. Please try again');
          var lightSaberColor = prompt("What color is Mace Windu's light saber?").toLowerCase();
-         userGuessesRemaining--;
-     }
+         userGuessesRemaining--;}
      
     if(lightSaberColor === 'purple'){
          alert('Well done padwan');
          userScore = userScore + 1;
      }   else{
-         alert("Sorry, the correct answer is purple. DUH.");
-     }
+         alert("Sorry, the correct answer is purple. DUH.");}
      console.log(userScore);
 
      userGuessesRemaining = 1; //resetting the user guess to one with each question because the whilo loop resets it to 0
@@ -32,28 +30,23 @@
      while(userGuessesRemaining > 0 && nameGiver !== 'yoda'){
         alert('Come Padawan, the answer is right before you. Please try again');
         var nameGiver = prompt("What famous Jedi gave Mace Windu his name?").toLowerCase();
-        userGuessesRemaining--;
-     }
+        userGuessesRemaining--;}
 
      if(nameGiver === 'yoda'){
          alert("Clever, you are!");
          userScore = userScore + 1;
      }  else{
-         alert('Study more, you must. The correct answer is Yoda.');
-     }
+         alert('Study more, you must. The correct answer is Yoda.');}
      console.log(userScore);
 
      var winduHistory = prompt("Did Mace Windu kill Jengo Fett at the Battle of Geonosis? Answer yes or no").toLowerCase();
      if(winduHistory === 'yes'){
         alert('Correct! Jengo should have known better than to cross a Grand Master. Good job, ' + getUserName);
         userScore = userScore + 1;
-    }
-    else if(winduHistory === 'no'){
+    }else if(winduHistory === 'no'){
         alert("Incorrect. Are you even trying " + getUserName);
-    }
-    else{
-        alert("I said answer YES or NO. Follow directions next time!");
-    }
+    }else{
+        alert("I said answer YES or NO. Follow directions next time!");}
     console.log(userScore);
 
     userGuessesRemaining =1;
@@ -61,42 +54,35 @@
     while(userGuessesRemaining > 0 && birthPlace !== 'horuun kal'){
         alert("Not even close. Don't feel bad though, " + getUserName + ". That was a tough one.");
         var birthPlace = prompt("On what planet was Mace Windu born?").toLowerCase();
-        userGuessesRemaining--;
-    }
-     if(birthPlace === 'horuun kal'){
+        userGuessesRemaining--;}
+    if(birthPlace === 'horuun kal'){
          alert('Wow! You really know your Windu facts!');
-         userScore = userScore + 1;
-     }
+         userScore = userScore + 1;}
          else{
-             alert('Sorry, the correct answer is Horuun Kal!');
-         }
-    console.log(userScore);
+             alert('Sorry, the correct answer is Horuun Kal!');}
+     console.log(userScore);
 
-     userGuessesRemaining = 3;
-     var winduAge = 1; //prompt('How old was Mace Windu when he was betrayed by Anakin Skywalker? You get 4 guesses here.');
-     while(userGuessesRemaining > 0 && winduAge !== 53){
+    userGuessesRemaining = 3;
+    var winduAge = 1; //prompt('How old was Mace Windu when he was betrayed by Anakin Skywalker? You get 4 guesses here.');
+    while(userGuessesRemaining > 0 && winduAge !== 53){
         winduAge = prompt('How old was Mace Windu when he was betrayed by Anakin Skywalker?');
         winduAge = parseInt(winduAge);
          if(winduAge > 53){
              alert('Unfortunately Anakin never let him get that old. Try again.');
          }else if(winduAge < 53){
-             alert('He was older and wiser than this. Try again.');
-         }
-          userGuessesRemaining--;
-        }
-
-     if(winduAge === 53){
+             alert('He was older and wiser than this. Try again.');}
+          userGuessesRemaining--;}
+    if(winduAge === 53){
         alert('Correct! He died too young.');
-        userScore = userScore + 1;
-     }else{
-         alert('Sorry the answer we were looking for is 53!');
-        }
+        userScore = userScore + 1;}
+        else{
+         alert('Sorry the answer we were looking for is 53!');}
     console.log(userScore);
     
     userGuessesRemaining =6;
     var userGuessedCorrectly = false;
     var possibleAnswers = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
-    'j', 'k', 'l', 'm', 'n', 'o', 'p'];
+    'j', 'k', 'l', 'm', 'n', 'o', 'p'];// these are placeholder values for testing
     
    while(userGuessesRemaining > 0 && !userGuessedCorrectly){
     var jediCouncilMembers = prompt('Name any jedi who served on the High Council with Mace Windu.').toLowerCase();
@@ -106,32 +92,28 @@
         if(jediCouncilMembers === possibleAnswers[i]){
             alert("That's right!");
             userScore = userScore +1;
-            userGuessedCorrectly = true;
-            }
-        } if(userGuessedCorrectly === false && userGuessesRemaining > 1){ 
+            userGuessedCorrectly = true;}
+        } 
+        if(userGuessedCorrectly === false && userGuessesRemaining > 1){ 
             alert("Nope. Try again!")
            console.log('user guessed wrong');
         } if(userGuessesRemaining === 1){
             alert('last try!');
-            continue;
+            continue;}
         }
-      }
-      if (userGuessedCorrectly === false){
-        alert('Better luck next time!')
-    }
+    if (userGuessedCorrectly === false){
+        alert('Better luck next time!')}
           
     var isWinduGreat = prompt('This one is easy. Is Mace Windu the greatest Jedi of all time? Respond with a simple yes or no.').toLowerCase();
      if(isWinduGreat === 'yes'){
         alert('The force is strong with you. You win! This was the only question that mattered. Bye ' + getUserName);
-        userScore = userScore +1;
-    }
+        userScore = userScore +1;}
+
     else if(isWinduGreat === 'no'){
-        alert('You must be sith. Get away from my blog right now.');
-    }
+        alert('You must be sith. Get away from my blog right now.');}
     else{
         alert("I said answer YES or NO. Follow directions next time!");
     }
     var finalScore = alert('You scored ' + userScore + " out of 7!");
     console.log(userScore);
 }
-    
