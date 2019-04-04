@@ -38,8 +38,8 @@ h2 {
     border-radius: 50px;
     border: 4px solid #000000;
     background-color: rgba(58, 5, 49, 0.5);
-    font-size: 24px;*/
-}
+    font-size: 24px;
+}*/
 #maceWinduFacts{
     position: relative;
     background: rgb(230, 230, 230);
@@ -50,7 +50,7 @@ h2 {
 table{
     position: absolute;
     top: 15%;
-    width: 100%;
+    width: 98%;
     height: 5%;
     color: white;
     background-color: #000000;
