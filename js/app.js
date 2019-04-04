@@ -93,31 +93,34 @@
         }
     console.log(userScore);
     
-    userGuessesRemaining =4;
+    userGuessesRemaining =6;
     var userGuessedCorrectly = false;
     var possibleAnswers = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
     'j', 'k', 'l', 'm', 'n', 'o', 'p'];
-
-   // var jediCouncilMembers = prompt('Name jedi who served on the high Council with Mace Windu. You have 5 attempts. Each correct answer is worth 1 point.').toLowerCase();
     
    while(userGuessesRemaining > 0 && !userGuessedCorrectly){
-    var jediCouncilMembers = prompt('Name any jedi who served on the high Council with Mace Windu.').toLowerCase();
+    var jediCouncilMembers = prompt('Name any jedi who served on the High Council with Mace Windu.').toLowerCase();
+    userGuessesRemaining--;
     console.log(jediCouncilMembers);
     for (var i = 0; i < possibleAnswers.length; i++){
         if(jediCouncilMembers === possibleAnswers[i]){
             alert("That's right!");
             userScore = userScore +1;
             userGuessedCorrectly = true;
-            break;
             }
+        } if(userGuessedCorrectly === false && userGuessesRemaining > 1){ 
+            alert("Nope. Try again!")
+           console.log('user guessed wrong');
+        } if(userGuessesRemaining === 1){
+            alert('last try!');
+            continue;
         }
-         if(userGuessedCorrectly === true){ 
-            console.log('user guessed correctly');
-            }   userGuessesRemaining--;
-    }       
-    
-     
-     var isWinduGreat = prompt('This one is easy. Is Mace Windu the greatest Jedi of all time? Respond with a simple yes or no.').toLowerCase();
+      }
+      if (userGuessedCorrectly === false){
+        alert('Better luck next time!')
+    }
+          
+    var isWinduGreat = prompt('This one is easy. Is Mace Windu the greatest Jedi of all time? Respond with a simple yes or no.').toLowerCase();
      if(isWinduGreat === 'yes'){
         alert('The force is strong with you. You win! This was the only question that mattered. Bye ' + getUserName);
         userScore = userScore +1;
@@ -130,5 +133,5 @@
     }
     var finalScore = alert('You scored ' + userScore + " out of 7!");
     console.log(userScore);
-     }
+}
     
