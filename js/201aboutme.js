@@ -1,17 +1,26 @@
 'use strict'; // I want to use the new set of rules
  
- function startQuiz(){
-     alert("Time to prove your Mace Windu knowledge! My coding skills are basic so answers must be spelled correctly to get credit! Good luck!")
-     var getUserName = prompt("To start, what's your name? This is the one question you can't get wrong.")
-     alert("WRONG! Just kidding, " + getUserName + " is a cool name. Let's get started")
-    
-     /*I used a series of prompts so the user can type their response. All responses are converted to
-     lowercase so the answers aren't case sensitive. Code is contained within a function so it
-     can be called with a button in html*/
+var userGuessesRemaining = 1; 
+var userScore = 0; //I declared these variables at the top so they would be recognized inside all functions
+var getUserName;
 
-     var userGuessesRemaining = 1; //User will get 2 attempts to answer each question, except yes or no questions.
-     var userScore = 0;
-     
+
+function startQuiz(){
+    alert("Time to prove your Mace Windu knowledge! My coding skills are basic so answers must be spelled correctly to get credit! Good luck!")
+    var getUserName = prompt("To start, what's your name? This is the one question you can't get wrong.")
+    alert("WRONG! Just kidding, " + getUserName + " is a cool name. Let's get started")
+
+    questionOne();
+    questionTwo();  
+    questionThree();
+    questionFour();
+    questionFive();
+    questionSix();
+    questionSeven();
+    calculateScore();
+}
+    
+     function questionOne(){
      var lightSaberColor = prompt("What color is Mace Windu's light saber?").toLowerCase();
      while(userGuessesRemaining > 0 && lightSaberColor !== 'purple'){
          alert('Come Padawan, the answer is right before you. Please try again');
@@ -24,8 +33,10 @@
      }   else{
          alert("Sorry, the correct answer is purple. DUH.");}
      console.log(userScore);
-
-     userGuessesRemaining = 1; //resetting the user guess to one with each question because the whilo loop resets it to 0
+    }
+    
+     function questionTwo(){
+     userGuessesRemaining = 1; //resetting the user guess as necessary with each question because the while loop resets it to 0
      var nameGiver = prompt("What famous Jedi gave Mace Windu his name?").toLowerCase();
      while(userGuessesRemaining > 0 && nameGiver !== 'yoda'){
         alert('Come Padawan, the answer is right before you. Please try again');
@@ -38,7 +49,9 @@
      }  else{
          alert('Study more, you must. The correct answer is Yoda.');}
      console.log(userScore);
+    }
 
+     function questionThree(){
      var winduHistory = prompt("Did Mace Windu kill Jengo Fett at the Battle of Geonosis? Answer yes or no").toLowerCase();
      if(winduHistory === 'yes'){
         alert('Correct! Jengo should have known better than to cross a Grand Master. Good job, ' + getUserName);
@@ -47,8 +60,9 @@
         alert("Incorrect. Are you even trying " + getUserName);
     }else{
         alert("I said answer YES or NO. Follow directions next time!");}
-    console.log(userScore);
+    console.log(userScore);}
 
+    function questionFour(){
     userGuessesRemaining =1;
     var birthPlace = prompt("On what planet was Mace Windu born?").toLowerCase();
     while(userGuessesRemaining > 0 && birthPlace !== 'horuun kal'){
@@ -61,7 +75,9 @@
          else{
              alert('Sorry, the correct answer is Horuun Kal!');}
      console.log(userScore);
+    }
 
+    function questionFive(){
     userGuessesRemaining = 3;
     var winduAge = 1; //prompt('How old was Mace Windu when he was betrayed by Anakin Skywalker? You get 4 guesses here.');
     while(userGuessesRemaining > 0 && winduAge !== 53){
@@ -78,12 +94,14 @@
         else{
          alert('Sorry the answer we were looking for is 53!');}
     console.log(userScore);
-    
+}
+
+function questionSix(){
     userGuessesRemaining =6;
     var userGuessedCorrectly = false;
-    var possibleAnswers = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
-    'j', 'k', 'l', 'm', 'n', 'o', 'p'];// these are placeholder values for testing
-    
+    var possibleAnswers = ['plo koon', 'yoda', 'ki adi mundi', 'obi wan kenobi', 'depa billaba', 'stass allie', 
+    'anakin akywalker', 'adi gallia', 'even piell', 'coleman kcaj', 'oppo rancisis', 'kit Fisto', 'shaak ti', 
+    'agen kolar', 'eeth koth', 'saesee tiin'];
    while(userGuessesRemaining > 0 && !userGuessedCorrectly){
     var jediCouncilMembers = prompt('Name any jedi who served on the High Council with Mace Windu.').toLowerCase();
     userGuessesRemaining--;
@@ -103,7 +121,9 @@
         }
     if (userGuessedCorrectly === false){
         alert('Better luck next time!')}
-          
+    }
+    
+    function questionSeven(){
     var isWinduGreat = prompt('This one is easy. Is Mace Windu the greatest Jedi of all time? Respond with a simple yes or no.').toLowerCase();
      if(isWinduGreat === 'yes'){
         alert('The force is strong with you. You win! This was the only question that mattered. Bye ' + getUserName);
@@ -114,6 +134,9 @@
     else{
         alert("I said answer YES or NO. Follow directions next time!");
     }
-    var finalScore = alert('You scored ' + userScore + " out of 7!");
+}
+
+    function calculateScore(){
+        alert('You scored ' + userScore + " out of 7!");
     console.log(userScore);
 }
