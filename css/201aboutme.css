@@ -46,15 +46,18 @@ h2 {
 
 div{
   position: absolute;
-  top: 100%;
   margin-bottom: 5%;
-  left: 10%;
-  text-align: center;
+  top: 100%;
+  left: 35%;
   background-color:rgba(255, 255, 255, .5);
-  width: 75%;
-  font-size: 18px;
+  width: 40%;
+  font-size: 14px;
+  border: #4d044d; 
+  border-width: 5px;
   color: rgb(105, 34, 105);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 3;
+  list-style: -o-linear-gradient();
 }
 
 th:hover{
