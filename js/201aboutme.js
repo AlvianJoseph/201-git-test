@@ -3,22 +3,6 @@
 var userGuessesRemaining = 1; 
 var userScore = 0; //I declared these variables at the top so they would be recognized inside all functions
 var getUserName;
-
-
-function startQuiz(){
-    alert("Time to prove your Mace Windu knowledge! My coding skills are basic so answers must be spelled correctly to get credit! Good luck!")
-    getUserName = prompt("To start, what's your name? This is the one question you can't get wrong.")
-    alert("WRONG! Just kidding, " + getUserName + " is a cool name. Let's get started")
-
-    questionOne();
-    questionTwo();  
-    questionThree();
-    questionFour();
-    questionFive();
-    questionSix();
-    questionSeven();
-    calculateScore();
-}
     
 function questionOne(){
      var lightSaberColor = prompt("What color is Mace Windu's light saber?").toLowerCase();
@@ -139,4 +123,19 @@ function questionSeven(){
 function calculateScore(){
         alert('You scored ' + userScore + " out of 7!");
     console.log(userScore);
+}
+
+function startQuiz(){
+    alert("Time to prove your Mace Windu knowledge! My coding skills are basic so answers must be spelled correctly to get credit! Good luck!")
+    getUserName = prompt("To start, what's your name? This is the one question you can't get wrong.")
+    alert("WRONG! Just kidding, " + getUserName + " is a cool name. Let's get started")
+
+    questionOne();
+    questionTwo();  
+    questionThree();
+    questionFour();
+    questionFive();
+    questionSix();
+    questionSeven();
+    calculateScore();
 }

@@ -42,8 +42,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   color: white;
-  font-style: italic;
-}
+  }
 
 div{
   position: absolute;
