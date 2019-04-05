@@ -7,7 +7,7 @@ var getUserName;
 
 function startQuiz(){
     alert("Time to prove your Mace Windu knowledge! My coding skills are basic so answers must be spelled correctly to get credit! Good luck!")
-    var getUserName = prompt("To start, what's your name? This is the one question you can't get wrong.")
+    getUserName = prompt("To start, what's your name? This is the one question you can't get wrong.")
     alert("WRONG! Just kidding, " + getUserName + " is a cool name. Let's get started")
 
     questionOne();
@@ -20,7 +20,7 @@ function startQuiz(){
     calculateScore();
 }
     
-     function questionOne(){
+function questionOne(){
      var lightSaberColor = prompt("What color is Mace Windu's light saber?").toLowerCase();
      while(userGuessesRemaining > 0 && lightSaberColor !== 'purple'){
          alert('Come Padawan, the answer is right before you. Please try again');
@@ -35,7 +35,7 @@ function startQuiz(){
      console.log(userScore);
     }
     
-     function questionTwo(){
+function questionTwo(){
      userGuessesRemaining = 1; //resetting the user guess as necessary with each question because the while loop resets it to 0
      var nameGiver = prompt("What famous Jedi gave Mace Windu his name?").toLowerCase();
      while(userGuessesRemaining > 0 && nameGiver !== 'yoda'){
@@ -51,7 +51,7 @@ function startQuiz(){
      console.log(userScore);
     }
 
-     function questionThree(){
+function questionThree(){
      var winduHistory = prompt("Did Mace Windu kill Jengo Fett at the Battle of Geonosis? Answer yes or no").toLowerCase();
      if(winduHistory === 'yes'){
         alert('Correct! Jengo should have known better than to cross a Grand Master. Good job, ' + getUserName);
@@ -62,7 +62,7 @@ function startQuiz(){
         alert("I said answer YES or NO. Follow directions next time!");}
     console.log(userScore);}
 
-    function questionFour(){
+function questionFour(){
     userGuessesRemaining =1;
     var birthPlace = prompt("On what planet was Mace Windu born?").toLowerCase();
     while(userGuessesRemaining > 0 && birthPlace !== 'horuun kal'){
@@ -77,7 +77,7 @@ function startQuiz(){
      console.log(userScore);
     }
 
-    function questionFive(){
+function questionFive(){
     userGuessesRemaining = 3;
     var winduAge = 1; //prompt('How old was Mace Windu when he was betrayed by Anakin Skywalker? You get 4 guesses here.');
     while(userGuessesRemaining > 0 && winduAge !== 53){
@@ -123,7 +123,7 @@ function questionSix(){
         alert('Better luck next time!')}
     }
     
-    function questionSeven(){
+function questionSeven(){
     var isWinduGreat = prompt('This one is easy. Is Mace Windu the greatest Jedi of all time? Respond with a simple yes or no.').toLowerCase();
      if(isWinduGreat === 'yes'){
         alert('The force is strong with you. You win! This was the only question that mattered. Bye ' + getUserName);
@@ -136,7 +136,7 @@ function questionSix(){
     }
 }
 
-    function calculateScore(){
+function calculateScore(){
         alert('You scored ' + userScore + " out of 7!");
     console.log(userScore);
 }
